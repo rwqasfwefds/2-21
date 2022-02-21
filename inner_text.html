@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/inner_textjs"></script>
+</head>
+<body>
+    <button onclick="inneText()">innerText로 표시하기</button>
+    <button onclick="inneHTML()">innerHTML로 표시하기</button>
+
+    <h1>현재 시각:</h1>
+    <!-- 출력 위치 -->
+    <div id="current"></div>
+
+    <script>
+        // 햔재 시간 불러오기
+        let now = new Date();
+
+        function inneText(){
+            document.getElementById("current").innerText = now;
+        }
+        function inneHTML(){
+            document.getElementById("current").innerHTML = "<em>" + now + "</em>";
+        }
+        
+        //text는 HTML태그가 안 먹히고 HTML은 먹힘
+        
+    </script>
+</body>
+</html>
